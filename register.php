@@ -35,10 +35,11 @@ if(Input::exists()) {
         $user->create(array(
           'username' => Input::get('username'),
           'password' => Hash::make(Input::get('password'), $salt),
+          'email' => Input::get('email'),
           'salt' => $salt,
           'name' => Input::get('name'),
           'joined' => date('Y-m-d H:i:s'),
-          'groupId' => 1
+          'group' => 1
         ));
 
         Session::flash('home', 'You have been registered and can now log in!');
@@ -70,6 +71,11 @@ if(Input::exists()) {
   <div class="field">
     <label for="password_again">Enter your password again</label>
     <input type="password" name="password_again" id="password_again" />
+  </div>
+
+  <div class="field">
+    <label for="email">Enter your emai</label>
+    <input type="email" name="email" id="email" />
   </div>
 
   <div class="field">
