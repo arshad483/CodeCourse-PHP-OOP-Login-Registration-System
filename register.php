@@ -74,7 +74,7 @@ if(Input::exists()) {
   </div>
 
   <div class="field">
-    <label for="email">Enter your emai</label>
+    <label for="email">Enter your email</label>
     <input type="email" name="email" id="email" />
   </div>
 
